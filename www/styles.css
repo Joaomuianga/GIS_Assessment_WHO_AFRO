@@ -1,0 +1,520 @@
+/* =====================================================
+   WHO AFRO SURVEILLANCE SUPPORT DASHBOARD
+   Author: Joao Muianga
+===================================================== */
+
+
+/* =====================================================
+   GENERAL PAGE
+===================================================== */
+
+body {
+    background: #F5F7FA !important;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.dashboard-section {
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card {
+    background: #FFFFFF !important;
+    border: 1px solid #E5E7EB !important;
+    border-radius: 16px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10) !important;
+}
+
+.card-header {
+    background: #FFFFFF !important;
+    border-bottom: 1px solid #F0F2F5 !important;
+    padding: 14px 18px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #183153 !important;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.bslib-sidebar-layout > .sidebar,
+.bslib-sidebar-layout > aside,
+aside.sidebar,
+.sidebar {
+    background-color: #052B57 !important;
+    color: white !important;
+    border-right: none !important;
+}
+
+.bslib-sidebar-layout > .sidebar *,
+.bslib-sidebar-layout > aside *,
+aside.sidebar *,
+.sidebar * {
+    color: white !important;
+}
+
+.sidebar-header {
+    text-align: center !important;
+    margin: 20px 0 30px 0 !important;
+}
+
+.sidebar-logo {
+    max-width: 180px !important;
+    height: auto !important;
+}
+
+.sidebar a,
+aside.sidebar a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.sidebar-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+
+    width: 100% !important;
+
+    padding: 13px 16px !important;
+    margin-bottom: 8px !important;
+
+    color: white !important;
+    background: transparent !important;
+    text-decoration: none !important;
+
+    border-radius: 10px !important;
+
+    font-size: 15px !important;
+    font-weight: 500 !important;
+
+    transition: all .2s ease-in-out;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active-menu {
+    background: #2F80ED !important;
+    color: white !important;
+}
+
+.sidebar-link svg,
+.sidebar-link .bi {
+    color: white !important;
+    font-size: 18px !important;
+}
+
+
+/* =====================================================
+   PAGE TITLES
+===================================================== */
+
+.dashboard-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #17324F;
+}
+
+.dashboard-subtitle {
+    font-size: 16px;
+    color: #6C757D;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   KPI CARDS
+===================================================== */
+
+.kpi-card {
+    border-radius: 14px !important;
+    padding: 16px 20px !important;
+    min-height: 115px !important;
+    color: white !important;
+
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
+}
+
+.kpi-card,
+.kpi-card * {
+    color: white !important;
+}
+
+.kpi-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.20);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px !important;
+    color: white !important;
+}
+
+.kpi-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    opacity: 0.90;
+    margin-bottom: 8px;
+}
+
+.kpi-value {
+    font-size: 42px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    margin-top: 6px;
+}
+
+.kpi-subtitle {
+    font-size: 13px !important;
+    opacity: 0.85;
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   KPI COLORS
+===================================================== */
+
+.card-blue {
+    background: #17324F !important;
+}
+
+.card-green {
+    background: #2AB7A9 !important;
+}
+
+.card-orange {
+    background: #F39C12 !important;
+}
+
+.card-red {
+    background: #E74C3C !important;
+}
+
+
+/* =====================================================
+   KEY MESSAGE BOX
+===================================================== */
+
+.key-message-box {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+
+    background: #FFF8E1 !important;
+
+    border-left: 6px solid #F39C12 !important;
+    border-radius: 14px !important;
+
+    padding: 18px 22px !important;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+}
+
+.key-message-icon {
+    width: 42px !important;
+    height: 42px !important;
+
+    border-radius: 12px !important;
+
+    background: #F39C12 !important;
+    color: white !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 22px !important;
+    flex-shrink: 0 !important;
+}
+
+.key-message-icon svg,
+.key-message-icon .bi {
+    color: white !important;
+}
+
+.key-message-title {
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    color: #17324F !important;
+    margin-bottom: 4px !important;
+}
+
+.key-message-text {
+    font-size: 14px !important;
+    color: #374151 !important;
+    line-height: 1.5 !important;
+}
+
+
+/* =====================================================
+   LEAFLET MAP
+===================================================== */
+
+.leaflet-container {
+    background: #F8F9FA !important;
+    border-radius: 12px !important;
+}
+
+
+/* =====================================================
+   PLOTLY
+===================================================== */
+
+.js-plotly-plot .legendtext {
+    font-weight: bold !important;
+}
+
+
+/* =====================================================
+   DATATABLES
+===================================================== */
+
+.dataTables_wrapper {
+    width: 100%;
+    font-family: "Segoe UI", sans-serif;
+}
+
+table.dataTable {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0;
+}
+
+table.dataTable thead th {
+    background: white !important;
+    color: #183153 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    border-bottom: 2px solid #e5e7eb !important;
+    padding: 14px 10px !important;
+}
+
+table.dataTable tbody tr {
+    height: 56px;
+    transition: all .2s ease-in-out;
+}
+
+table.dataTable tbody tr:hover {
+    background-color: #f8fafc !important;
+}
+
+table.dataTable tbody td {
+    font-size: 14px;
+    vertical-align: middle;
+    padding: 12px 10px !important;
+    border-top: none !important;
+}
+
+.dt-center {
+    text-align: center;
+}
+
+table.dataTable.no-footer {
+    border-bottom: none !important;
+}
+
+.dataTables_paginate {
+    margin-top: 12px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 8px !important;
+    border: none !important;
+    padding: 6px 12px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: #2F80ED !important;
+    color: white !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #DCEBFF !important;
+    color: #183153 !important;
+}
+
+.dataTables_filter input {
+    border-radius: 8px !important;
+    border: 1px solid #d1d5db !important;
+    padding: 6px 10px !important;
+}
+
+.dataTables_length {
+    display: none;
+}
+
+
+/* =====================================================
+   PROGRESS BAR FOR RANKING TABLE
+===================================================== */
+
+.progress-container {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    height: 8px;
+    margin-top: 4px;
+}
+
+.progress-fill {
+    height: 8px;
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   INDICATOR PERFORMANCE TABLE
+===================================================== */
+
+.indicator-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.indicator-table th {
+    text-align: left;
+    padding: 10px 6px;
+    color: #183153;
+    font-weight: 700;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.indicator-table td {
+    padding: 12px 6px;
+    vertical-align: middle;
+}
+
+.indicator-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.indicator-value {
+    width: 45px;
+    font-weight: 700;
+}
+
+.indicator-bar-bg {
+    width: 100px;
+    height: 10px;
+    background: #ececec;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.indicator-bar-fill {
+    height: 10px;
+    border-radius: 8px;
+}
+
+
+/* =====================================================
+   RECOMMENDATION CARDS
+===================================================== */
+
+.recommend-card {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+}
+
+.recommend-card svg {
+    width: 26px;
+    height: 26px;
+    color: #f39c12;
+    flex-shrink: 0;
+}
+
+.recommend-card h5 {
+    margin: 0;
+    color: #183153;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.recommend-card p {
+    margin: 4px 0 0 0;
+    font-size: 12px;
+    color: #555;
+}
+
+
+/* =====================================================
+   FINAL BACKGROUND FIX
+===================================================== */
+
+html,
+body,
+.bslib-page-fill,
+.bslib-sidebar-layout > main,
+.bslib-sidebar-layout > .main,
+.bslib-sidebar-layout .main {
+    background: #F5F7FA !important;
+}
+
+/* Sidebar only */
+.bslib-sidebar-layout > aside,
+.bslib-sidebar-layout > .sidebar,
+aside.sidebar,
+.sidebar {
+    background: #052B57 !important;
+    color: white !important;
+}
+
+/* Sidebar text and links only */
+.bslib-sidebar-layout > aside *,
+.bslib-sidebar-layout > .sidebar *,
+aside.sidebar *,
+.sidebar * {
+    color: white !important;
+}
+
+/* =====================================================
+   SMALL DEVICES
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .dashboard-title {
+        font-size: 24px;
+    }
+
+    .dashboard-subtitle {
+        font-size: 14px;
+    }
+
+    .kpi-value {
+        font-size: 32px !important;
+    }
+
+    .kpi-card {
+        margin-bottom: 10px;
+    }
+}
+
+
