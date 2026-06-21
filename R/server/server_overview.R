@@ -454,8 +454,8 @@ overview_server <- function(
         "#B10026",
         "#FC4E2A",
         "#FEB24C",
-        "#FED976",
-        "#FFF7BC",
+        "#63eb8c",
+        "#13632b",
         "#D9D9D9"
       ),
       
@@ -608,8 +608,8 @@ overview_server <- function(
           "#B10026",
           "#FC4E2A",
           "#FEB24C",
-          "#FED976",
-          "#FFF7BC",
+          "#63eb8c",
+          "#13632b",
           "#D9D9D9"
         )
       )

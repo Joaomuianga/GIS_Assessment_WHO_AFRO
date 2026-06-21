@@ -5,6 +5,6 @@ account: joaomuianga
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 17535863
-bundleId: 12158088
+bundleId: 12158681
 url: https://joaomuianga.shinyapps.io/gis_assessment/
 version: 1

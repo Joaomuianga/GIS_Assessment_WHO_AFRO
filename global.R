@@ -228,8 +228,8 @@ priority_palette <- colorFactor(
     "#B10026",
     "#FC4E2A",
     "#FEB24C",
-    "#FED976",
-    "#FFF7BC",
+    "#63eb8c",
+    "#13632b",
     "#D9D9D9"
   ),
   
@@ -250,8 +250,8 @@ priority_colors <- c(
   "Very High (≥ 0.90)" = "#B10026",
   "High (0.80 - 0.89)" = "#FC4E2A",
   "Medium (0.50 - 0.79)" = "#FEB24C",
-  "Low (0.20 - 0.49)" = "#FED976",
-  "Very Low (0.00 - 0.19)" = "#FFF7BC",
+  "Low (0.20 - 0.49)" = "#63eb8c",
+  "Very Low (0.00 - 0.19)" = "#13632b",
   "No Data" = "#D9D9D9"
   
 )

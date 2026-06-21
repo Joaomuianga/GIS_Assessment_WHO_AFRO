@@ -1,84 +1,238 @@
 # WHO AFRO Surveillance Support Dashboard
 
-- **GitHub**: https://github.com/Joaomuianga/GIS_Assessment_WHO_AFRO
-- **Live Dashboard**: https://joaomuianga.shinyapps.io/gis_assessment/
+## Author
 
-## Overview
+**João Constantino Muianga**
+Consultant – GIS Specialist Technical Assessment
+June 2026
 
-This project was developed by Joao Muianga as part of the technical assessment for the GIS Specialist position.
+GitHub: https://github.com/Joaomuianga/GIS_Assessment_WHO_AFRO
+Live Dashboard: https://joaomuianga.shinyapps.io/gis_assessment/
 
-The dashboard supports evidence-based decision-making for strengthening disease surveillance systems across the WHO African Region.
+---
 
-## Features
+# 1. Project Overview
 
-- Interactive surveillance support map
-- Country prioritization framework
-- Regional surveillance indicators
-- Disease outbreak analysis
-- Country profile exploration
-- Recommendations module
-- Trend analysis over time
+The WHO AFRO Surveillance Support Dashboard is an interactive decision-support platform developed to assist WHO Regional Office for Africa in identifying countries requiring enhanced surveillance support and prioritizing resource allocation.
 
-## Technologies
+The dashboard integrates surveillance, laboratory, workforce, funding, and outbreak indicators to generate a composite Surveillance Support Score and identify countries requiring targeted interventions.
 
-- R
-- Shiny
-- PostgreSQL
-- Leaflet
-- Plotly
-- DT
-- sf
-- dplyr
-- DBI
-- RPostgres
-- bslib
+---
 
-## Project Structure
+# 2. Objectives
 
-```
+The dashboard was developed to support:
+
+* Surveillance system performance assessment.
+* Identification of countries requiring urgent support.
+* Evidence-based decision making.
+* Resource prioritization across countries.
+* Regional monitoring of surveillance trends.
+
+---
+
+# 3. Key Questions
+
+The application addresses the following questions:
+
+1. Which countries require urgent support?
+2. Which surveillance indicators are performing poorly?
+3. Where should WHO prioritize interventions?
+4. How have surveillance indicators evolved over time?
+5. Which countries have the highest surveillance support needs?
+
+---
+
+# 4. Data Sources
+
+The application uses synthetic datasets representing surveillance information from 20 African countries between 2021 and 2025.
+
+Datasets include:
+
+| Dataset              | Description                                   |
+| -------------------- | --------------------------------------------- |
+| Countries            | Country reference information and coordinates |
+| Population           | Annual population estimates                   |
+| Disease Surveillance | Core surveillance indicators                  |
+| Outbreaks            | Event-level outbreak information              |
+| Laboratory Capacity  | Laboratory performance indicators             |
+| Reporting Metrics    | Timeliness and completeness indicators        |
+| Workforce            | Epidemiology workforce indicators             |
+| Funding              | Annual surveillance funding levels            |
+
+---
+
+# 5. Technology Stack
+
+## Programming Languages
+
+* R
+
+## Database
+
+* PostgreSQL
+
+## Packages
+
+* shiny
+* bslib
+* tidyverse
+* leaflet
+* plotly
+* DT
+* sf
+* DBI
+* RPostgres
+* scales
+
+## Version Control
+
+* Git
+* GitHub
+
+---
+
+# 6. System Architecture
+
+CSV Files
+
+↓
+
+PostgreSQL Database
+
+↓
+
+ETL and Data Processing
+
+↓
+
+Data Quality Assessment
+
+↓
+
+Composite Surveillance Support Score
+
+↓
+
+Analytical Cache (.rds)
+
+↓
+
+Interactive Shiny Dashboard
+
+---
+
+# 7. Project Structure
+
+```text
 GIS_Assessment/
 │
 ├── app.R
 ├── global.R
-├── R/
 ├── data/
+├── docs/
+├── R/
+│   ├── database/
+│   ├── processing/
+│   ├── server/
+│   ├── ui/
+│   └── utils/
+│
 ├── sql/
 ├── www/
-├── docs/
-└── presentation/
+│   ├── styles.css
+│   ├── script.js
+│   └── logo.png
+│
+└── README.md
 ```
 
-## Dashboard Components
+---
 
-### Overview
+# 8. Data Processing Workflow
 
-- Key Performance Indicators
-- Regional support map
-- Indicator summaries
-- Disease outbreak distribution
-- Surveillance trends
+The application follows the steps below:
 
-### Country Profile
+1. Load surveillance data from PostgreSQL.
+2. Perform data cleaning and validation.
+3. Merge all datasets.
+4. Calculate derived indicators.
+5. Compute Surveillance Support Score.
+6. Classify countries into priority categories.
+7. Save processed analytical datasets as RDS cache files.
+8. Visualize results through the dashboard.
 
-Detailed country-level analysis and performance metrics.
+---
 
-### Recommendations
+# 9. Surveillance Support Score
 
-Evidence-based recommendations for targeted support.
+A composite score was developed using multiple surveillance dimensions:
 
-### About
+* Reporting timeliness.
+* Reporting completeness.
+* Laboratory capacity.
+* Workforce density.
+* Funding per capita.
+* Outbreak burden.
 
-Dashboard information and methodology.
+Countries are classified into:
 
-## Running the application
+| Category  | Threshold |
+| --------- | --------- |
+| Very High | ≥ 0.90    |
+| High      | 0.80–0.89 |
+| Medium    | 0.50–0.79 |
+| Low       | 0.20–0.49 |
+| Very Low  | < 0.20    |
 
-Clone the repository:
+---
+
+# 10. Dashboard Components
+
+## Overview
+
+* Regional KPIs.
+* Priority country ranking.
+* Interactive map.
+* Indicator summaries.
+* Outbreak distributions.
+* Regional trends.
+
+## Country Profile
+
+Provides detailed country-level information.
+
+## Recommendations
+
+Generates tailored recommendations based on surveillance performance.
+
+## About
+
+Project information and methodology.
+
+---
+
+# 11. Deployment
+
+The application was developed locally using PostgreSQL.
+
+For cloud deployment, processed analytical datasets are stored as RDS files to avoid dependency on external database connections.
+
+Deployment platform:
+
+* shinyapps.io
+
+---
+
+# 12. Installation
+
+Clone repository:
 
 ```bash
-git clone https://github.com/username/GIS_Assessment_WHO_AFRO.git
+git clone https://github.com/Joaomuianga/GIS_Assessment_WHO_AFRO.git
 ```
 
-Open R:
+Install packages:
 
 ```r
 install.packages(c(
@@ -90,14 +244,47 @@ install.packages(c(
   "DT",
   "sf",
   "DBI",
-  "RPostgres"
+  "RPostgres",
+  "scales"
 ))
+```
 
+Run application:
+
+```r
 shiny::runApp()
 ```
 
-## Author
+---
 
-Joao Constantino Muianga
+# 13. Outputs
 
+<<<<<<< HEAD
 GIS Specialist | Data Manager | Public Health Informatics
+=======
+The dashboard supports:
+
+* Country prioritization.
+* Regional surveillance monitoring.
+* Resource allocation.
+* Programmatic decision-making.
+* Strategic planning.
+
+---
+
+# 14. Disclaimer
+
+This assessment uses synthetic data for demonstration purposes only.
+
+---
+
+# 15. Repository
+
+GitHub Repository:
+
+https://github.com/Joaomuianga/GIS_Assessment_WHO_AFRO
+
+Live Dashboard:
+
+<INSERT SHINYAPPS URL HERE>
+>>>>>>> 3d849b9 (Update dashboard design, documentation and architeture)

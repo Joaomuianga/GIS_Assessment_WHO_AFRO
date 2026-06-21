@@ -240,8 +240,8 @@ create_score_badge <- function(score){
     score >= 0.90 ~ "#B10026",
     score >= 0.80 ~ "#FC4E2A",
     score >= 0.50 ~ "#FEB24C",
-    score >= 0.20 ~ "#FED976",
-    TRUE ~ "#FFF7BC"
+    score >= 0.20 ~ "#63eb8c",
+    TRUE ~ "#13632b"
   )
   
   text_color <- ifelse(score < 0.20, "#333333", "white")
@@ -268,8 +268,8 @@ create_priority_badge <- function(priority){
     str_detect(priority,"Very High") ~ "#B10026",
     str_detect(priority,"High") ~ "#FC4E2A",
     str_detect(priority,"Medium") ~ "#FEB24C",
-    str_detect(priority,"Low") ~ "#FED976",
-    str_detect(priority, "Very Low") ~ "#FFF7BC",
+    str_detect(priority,"Low") ~ "#63eb8c",
+    str_detect(priority, "Very Low") ~ "#13632b",
     TRUE ~ "#6c757d"
     
   )

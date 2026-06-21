@@ -4,7 +4,8 @@
 ############################################################
 
 library(pacman)
-pacman::p_load(DBI, RPostgres)
+library(DBI) 
+library(RPostgres)
 
 source("R/database/database.R")
 load_data <- function(use_cache = TRUE) {
