@@ -1,7 +1,7 @@
 # WHO AFRO Surveillance Support Dashboard
 
-**GitHub**: https://github.com/Joaomuianga/GIS_Assessment_WHO_AFRO
-**Live Dashboard**: https://joaomuianga.shinyapps.io/gis_assessment/
+- **GitHub**: https://github.com/Joaomuianga/GIS_Assessment_WHO_AFRO
+- **Live Dashboard**: https://joaomuianga.shinyapps.io/gis_assessment/
 
 ## Overview
 
