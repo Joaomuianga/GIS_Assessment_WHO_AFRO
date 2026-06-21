@@ -1,14 +1,24 @@
 ############################################################
-# Load Data From PostgreSQL
+# Load Data From PostgreSQL or RDS Cache
 # Author: Joao Muianga
-# Date: 19 June 2026
 ############################################################
 
 library(pacman)
 pacman::p_load(DBI, RPostgres)
 
 source("R/database/database.R")
-load_data <- function() {
+load_data <- function(use_cache = TRUE) {
+  
+  cache_file <- "data/cache_data.rds"
+  
+  if (use_cache && file.exists(cache_file)) {
+    
+    message("Loading data from RDS cache...")
+    return(readRDS(cache_file))
+    
+  }
+  
+  message("Loading data from PostgreSQL...")
   
   con <- get_connection()
   
@@ -25,6 +35,9 @@ load_data <- function() {
   
   dbDisconnect(con)
   
-  return(data)
+  saveRDS(data, cache_file)
   
+  message("RDS cache saved to ", cache_file)
+  
+  return(data)
 }

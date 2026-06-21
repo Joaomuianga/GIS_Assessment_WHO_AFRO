@@ -67,7 +67,7 @@ message("Scripts successfully loaded.")
 
 message("Loading surveillance datasets...")
 
-data <- load_data()
+data <- load_data(use_cache = TRUE)
 
 ############################################################
 # DATA CLEANING + MERGING
@@ -279,7 +279,9 @@ WHO_TARGETS <- list(
   
 )
 
-
+###########################################################
+# PostgreSQL connection 
+###########################################################
 
 
 ############################################################
